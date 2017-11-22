@@ -1,5 +1,15 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 10%;
   font-family: sans-serif;
+}
+table {
+  border: 1px solid lightgrey;
+  border-spacing: 0.5rem;
+  border-collapse: collapse;
+}
+td {
+  border: 1px solid lightgrey;
+  padding: 1em;
+  vertical-align: top;
 }

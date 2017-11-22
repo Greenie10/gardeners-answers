@@ -14,7 +14,7 @@ class App extends Component {
       .database()
       .ref('data')
       .orderByKey()
-      .startAt('0')
+      .startAt('1')
       .limitToLast(100);
     dataRef.on('child_added', this.dataReadFromName);
   }
@@ -44,7 +44,7 @@ class App extends Component {
                 {entry.content.James ? 'James' : ''}
                 {entry.content.Bunny ? 'Bunny' : ''}
               </td>
-              <td key={entry.id}>{entry.content.text}</td>
+              <td>{entry.content.text}</td>
             </tr>
           ))}
         </table>
