@@ -1,18 +1,43 @@
-Using create-react-app and firebase to present the answers given in the radio
-programme "Gardeners' Question Time", by searching topic, season, or specific
-episode. A companion to the sparse 'Factsheet'.
+# Gardeners' Answers
 
-Firebase and create-react-app - article
+### Overview
+
+Using `create-react-app` and Firebase to present the answers given in the radio
+programme "Gardeners' Question Time", by searching topic, season, or specific
+episode. A companion to the sparse 'GQT Factsheet'.
+
+Inspired by this article on using Firebase and create-react-app
 https://www.codementor.io/yurio/all-you-need-is-react-firebase-4v7g9p4kf
 
-* remade gardeners-answers in my Github folder with `create-react-app`
-* connected to existing `gardeners-answers` in Firebase
-* Firebase link:
+* my Firebase console:
   https://console.firebase.google.com/u/0/project/gardeners-answers/overview
-* App link: https://gardeners-answers.firebaseapp.com/
-* to edit and deploy:
-  * make a change
-  * build it with `npm run build`
-  * upload new version with `firebase deploy`
+* my Gardeners' Answers app: https://gardeners-answers.firebaseapp.com/
 
-Updating json
+### Deployment
+
+* build it with `npm run build`
+* upload new version with `firebase deploy`
+
+### Data handling
+
+The questions and answers are initially composed in a csv file, as one line per
+question. A php script redefines it into a json file. Weekly updates are
+uploaded via the firebase console.
+
+### Firebase config file
+
+You will need to create your own in `/src/fire.js`:
+
+```
+import firebase from 'firebase';
+var config = {
+  apiKey: 'your-api-key',
+  authDomain: 'your-app.firebaseapp.com',
+  databaseURL: 'https://your-app.firebaseio.com',
+  projectId: 'your-app',
+  storageBucket: 'your-app.appspot.com',
+  messagingSenderId: 'your-messagingSenderId',
+};
+var fire = firebase.initializeApp(config);
+export default fire;
+```

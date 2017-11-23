@@ -1,0 +1,22 @@
+{
+  "questions": {
+    "00": {
+      "iplayer": "xx",
+      "month": "xx",
+      "year": "00",
+      "place": "xx",
+      "text": "xx",
+      "answerRefs": ["00", "00", "00"]
+    }
+  },
+  "answers": {
+    "00": {
+      "iplayer": "xx",
+      "month": "xx",
+      "year": "00",
+      "place": "xx",
+      "text": "xx",
+      "questionRef": "00"
+    }
+  }
+}
