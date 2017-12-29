@@ -1,15 +1,43 @@
+html {
+  background-color: #0C3804;
+  background-image: url(./images/lupins.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 62.5%;
+}
 body {
   margin: 0;
-  padding: 10%;
-  font-family: sans-serif;
+  padding: 1rem 5rem 5rem;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: white;
 }
-table {
-  border: 1px solid lightgrey;
-  border-spacing: 0.5rem;
-  border-collapse: collapse;
+h1 {
+  font-size: 5rem;
 }
-td {
-  border: 1px solid lightgrey;
-  padding: 1em;
-  vertical-align: top;
+p {
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 4rem;
 }
+p::first-letter {
+  color: #f46155;
+  font-size: 4rem;
+  font-weight: bold;
+  margin-right: 10px;
+}
+li {
+  margin-bottom: 2rem;
+}
+
+.mainContainer {
+  color:  darkgreen;
+  background-color: aliceblue;
+  padding: 1rem 5rem 5rem;
+  border-radius: 3px;
+}
+.panellistName {
+  font-weight: bold;
+}
+
