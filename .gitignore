@@ -3,6 +3,9 @@
 # dependencies
 /node_modules
 
+# data
+/data.json
+
 # testing
 /coverage
 
