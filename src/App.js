@@ -33,23 +33,21 @@ class App extends Component {
     return <div>
         <h1>Gardeners’ Answers</h1>
         <div className="mainContainer">
-          {
-          this.state.data.map(entry => <div>
+          {this.state.data.map(entry => <div key={entry.id}>
               <div>
                 <p>Q {entry.content.question}</p>
               </div>
               <div>
-                  <ul>
-                    {Object.entries(entry.content.answers).map(answer => (
-                      <li>
-                        <span className="panellistName">{answer[0]}</span> &mdash; {answer[1]}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ul>
+                  {Object.entries(entry.content.answers).map(answer => (
+                    <li key={answer[0]}>
+                      <span className="panellistName">{answer[0]}</span>{' '}
+                      &mdash; {answer[1]}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            )
-          }
+            </div>)}
         </div>
       </div>;
   }

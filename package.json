@@ -5,6 +5,7 @@
   "dependencies": {
     "algoliasearch": "^3.24.9",
     "firebase": "^4.6.1",
+    "firebase-tools": "^3.16.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-scripts": "1.0.17"
