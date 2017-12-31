@@ -1,6 +1,23 @@
 import React, { Component } from 'react';
 import fire from './fire';
-import { InstantSearch } from 'react-instantsearch/dom';
+import { InstantSearch, Hits } from 'react-instantsearch/dom';
+
+
+function Search() {
+  return (
+    <div className="container">
+      <Hits hitComponent={Item}/>
+    </div>
+  );
+}
+
+function Item({hit}) {
+  return (
+    <div>
+      {hit.question}
+    </div>
+  );
+};
 
 class App extends Component {
   constructor(props) {
@@ -33,7 +50,7 @@ class App extends Component {
   render() {
     return <div>
         <InstantSearch appId="YNWU87GBPU" apiKey="a43d81159b0ffc8eaf3812af985f5262" indexName="answers">
-          {/* Search widgets will go there */}
+          <Search />
         </InstantSearch>
         <h1>Gardeners’ Answers</h1>
         <div className="mainContainer">
