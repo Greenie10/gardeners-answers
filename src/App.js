@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 import fire from './fire';
 
-// var algoliasearch = require('algoliasearch');
-// var algoliasearch = require('algoliasearch/reactnative');
-// var algoliasearch = require('algoliasearch/lite');
-// or just use algoliasearch if you are using a <script> tag
-// if you are using AMD module loader, algoliasearch will not be defined in window,
-// but in the AMD modules of the page
-
-var client = algoliasearch('YNWU87GBPU', 'a43d81159b0ffc8eaf3812af985f5262');
-var index = client.initIndex('answers');
-
 class App extends Component {
   constructor(props) {
     super(props);
