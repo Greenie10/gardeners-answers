@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import fire from './fire';
+import { InstantSearch } from 'react-instantsearch/dom';
 
 class App extends Component {
   constructor(props) {
@@ -31,6 +32,9 @@ class App extends Component {
 
   render() {
     return <div>
+        <InstantSearch appId="YNWU87GBPU" apiKey="a43d81159b0ffc8eaf3812af985f5262" indexName="answers">
+          {/* Search widgets will go there */}
+        </InstantSearch>
         <h1>Gardeners’ Answers</h1>
         <div className="mainContainer">
           {this.state.data.map(entry => <div key={entry.id}>
