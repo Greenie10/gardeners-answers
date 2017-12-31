@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import fire from './fire';
-import { InstantSearch, Hits } from 'react-instantsearch/dom';
+import { InstantSearch, Hits, SearchBox } from 'react-instantsearch/dom';
+import Highlight from 'react-instantsearch/src/widgets/Highlight';
 
 
 function Search() {
   return (
     <div className="container">
+      <SearchBox translations={{placeholder: 'Search for words'}} />
       <Hits hitComponent={Item}/>
     </div>
   );
@@ -14,10 +16,28 @@ function Search() {
 function Item({hit}) {
   return (
     <div>
-      {hit.question}
-    </div>
+      <span className="hit-name">
+        <Highlight attributeName="question" hit={hit} />
+        </span>
+      </div>
   );
 };
+
+const Hit = ({hit}) =>
+  <div className="hit">
+  </div>
+
+const Sidebar = () => 
+  <div className="sidebar">
+
+  </div>
+
+const Content = () => 
+  <div className="content">
+
+  </div>
+
+
 
 class App extends Component {
   constructor(props) {
@@ -49,12 +69,16 @@ class App extends Component {
 
   render() {
     return <div>
-        <InstantSearch appId="YNWU87GBPU" apiKey="a43d81159b0ffc8eaf3812af985f5262" indexName="answers">
-          <Search />
-        </InstantSearch>
-        <h1>Gardeners’ Answers</h1>
-        <div className="mainContainer">
-          {this.state.data.map(entry => <div key={entry.id}>
+    <h1>Gardeners’ Answers</h1>
+    <div className="mainContainer">
+    <InstantSearch appId="YNWU87GBPU" apiKey="a43d81159b0ffc8eaf3812af985f5262" indexName="answers">
+      <Search />
+    </InstantSearch>
+    <main>
+      <Sidebar />
+      <Content />
+    </main>
+    {this.state.data.map(entry => <div key={entry.id}>
               <div>
                 <p>Q {entry.content.question}</p>
               </div>
