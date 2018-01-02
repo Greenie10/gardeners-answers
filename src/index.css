@@ -13,6 +13,9 @@ body {
   line-height: 3rem;
   color: white;
 }
+.ais-InstantSearch__root {
+  font-family: 'Quattrocento Sans', sans-serif;
+}
 h1 {
   font-size: 5rem;
 }
