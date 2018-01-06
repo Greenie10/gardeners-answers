@@ -16,6 +16,9 @@ body {
 .ais-InstantSearch__root {
   font-family: 'Quattrocento Sans', sans-serif;
 }
+.ais-Highlight__separator {
+  display: block;
+}
 h1 {
   font-size: 5rem;
 }
