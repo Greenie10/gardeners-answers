@@ -8,29 +8,27 @@ html {
 body {
   margin: 0;
   padding: 1rem 5rem 5rem;
-  font-family: 'Quattrocento Sans', sans-serif;
-  font-size: 2rem;
-  line-height: 3rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
   color: white;
 }
 .ais-InstantSearch__root {
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
 }
 .ais-Highlight__separator {
   display: block;
 }
 h1 {
-  font-size: 5rem;
+  font-size: 2.5rem;
 }
 p {
   font-weight: bold;
-  font-size: 3rem;
-  line-height: 4rem;
+  font-family: 'Libre Franklin', sans-serif;
 }
 p::first-letter {
   color: #f46155;
-  font-size: 4rem;
-  font-weight: bold;
+  font-size: 2.5rem;
   margin-right: 10px;
 }
 li {
